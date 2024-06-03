@@ -4,7 +4,9 @@ Es un archivo único que contiene todos los programas, librerías, dependencias 
 
 
 ## ¿Cuál es la relación entre una imagen y un contenedor? 
-# COMPLETAR 
+Una imagen de Docker es un archivo inmutable que contiene el código fuente, las bibliotecas, las dependencias, las herramientas y las configuraciones necesarias para ejecutar una aplicación. Es como una plantilla que define cómo se debe configurar y ejecutar un contenedor.
+
+Un contenedor de Docker es una instancia en ejecución de una imagen. Cuando ejecutas una imagen, Docker crea un contenedor a partir de esa imagen. Los contenedores son aislados y tienen su propio sistema de archivos, red y entorno, pero pueden compartir el kernel del host y otras configuraciones según se necesite. En resumen, una imagen es el plano, y un contenedor es una construcción activa basada en ese plano.
 
 ![Imagen y contenedores](imagenes/imagenYcontenedores.JPG)
 ## Comandos para imágenes
@@ -24,13 +26,17 @@ docker pull <nombre imagen>:<tag>
 ```
 
 Descargar la imagen **hello-world**
-# COMPLETAR
+
+![image](https://github.com/CristianDTV/2024A-ISWD633-GR1Cristian/assets/158982181/2d5f16f6-3bd3-4619-b15e-428e70ddaa40)
+
 
 **¿Qué es nginx**
-# COMPLETAR 
+Nginx (pronunciado "engine-x") es un servidor web de código abierto y un servidor proxy inverso. 
 
 Descargar la imagen  **nginx** en la versión **alpine**
-# COMPLETAR
+
+![image](https://github.com/CristianDTV/2024A-ISWD633-GR1Cristian/assets/158982181/656d7b23-1c7b-402e-9033-30b061a62d7c)
+
 
 ### Listar imágenes
 
@@ -38,7 +44,8 @@ Descargar la imagen  **nginx** en la versión **alpine**
 docker images
 ```
 
-# COLOCAR UNA CAPTURA DE PANTALLA DEL RESULTADO 
+![image](https://github.com/CristianDTV/2024A-ISWD633-GR1Cristian/assets/158982181/70a875b8-227a-41a2-bc6a-3d05ab153027)
+
 
 **Identificadores**
 En Docker, se utilizan varios identificadores para diferenciar de manera única los elementos del sistema, como imágenes, contenedores, volúmenes y redes. Estos identificadores son generados automáticamente por Docker y son únicos dentro del contexto del sistema Docker en el que se encuentran. 
@@ -52,10 +59,12 @@ docker inspect <nombre imagen>:<tag>
 ```
 
 Inspeccionar la imagen hello-world 
-# COMPLETAR
+
+![image](https://github.com/CristianDTV/2024A-ISWD633-GR1Cristian/assets/158982181/a9fa69bb-74a7-4a61-bcbb-845bab88e68a)
+
 
 **¿Con qué algoritmo se está generando el ID de la imagen**
-# COMPLETAR
+Docker utiliza el algoritmo SHA-256 para generar el ID de la imagen. Este algoritmo produce un hash único para cada imagen, lo que garantiza que cada imagen pueda ser identificada de manera única y precisa.
 
 ### Filtrar imágenes
 
@@ -72,7 +81,9 @@ docker rmi <nombre imagen>:<tag>
 ```
 
 Eliminar la imagen hello-world 
-# COMPLETAR
+
+![image](https://github.com/CristianDTV/2024A-ISWD633-GR1Cristian/assets/158982181/adc72bfa-3d1c-4b60-befe-f2543c3377ab)
+
 
 -f: Es la opción para forzar la eliminación de la imagen incluso si hay contenedores en ejecución que utilizan esa imagen.
 Cuando eliminas una imagen Docker, Docker no elimina automáticamente los contenedores que se han creado a partir de esa imagen. Esto significa que, aunque hayas eliminado la imagen, el contenedor seguirá ejecutándose normalmente.  

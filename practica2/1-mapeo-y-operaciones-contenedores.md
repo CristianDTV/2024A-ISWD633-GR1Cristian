@@ -15,12 +15,15 @@ docker run -P -d --name <nombre contenedor> <nombre imagen>:<tag>
 No puedes mapear puertos a un contenedor existente directamente después de su creación con Docker. El mapeo de puertos debe especificarse en el momento de crear y ejecutar el contenedor.
 
 ### Crear contenedor de Jenkins puertos contenedor: 8080 (interface web) y 50000 (comunicación entre nodos) imagen: jenkins/jenkins:alpine3.18-jdk11
-# COMPLETAR
+![image](https://github.com/CristianDTV/2024A-ISWD633-GR1Cristian/assets/158982181/f26cd309-2f1c-47e5-bf00-6574cd559397)
 
 # COLOCAR UNA CAPTURA DE PANTALLA  DEL ACCESO http://localhost:8080
 
+![image](https://github.com/CristianDTV/2024A-ISWD633-GR1Cristian/assets/158982181/3d2cd00e-dfa1-462c-9f9b-cf7014960ace)
+
 ### ¿Cómo obtener la contraseña solicitada?
 Para obtener la contraseña solicitada es necesario ingresar al contenedor.
+![image](https://github.com/CristianDTV/2024A-ISWD633-GR1Cristian/assets/158982181/055838be-8138-493b-bdb3-c4761c5726a2)
 
 ![Imagen](imagenes/jenkins.PNG)
 
@@ -30,12 +33,20 @@ Para obtener la contraseña solicitada es necesario ingresar al contenedor.
 ```
 docker exec <nombre contenedor> <comando> <argumentos opcionales>
 ```
-# COMPLETAR
 ### ¿Para qué se usa el comando ls?
+El comando ls se usa en sistemas Unix y similares (como Linux) para listar el contenido de un directorio. Muestra los nombres de archivos y directorios dentro del directorio actual o del directorio especificado.
 ### ¿Para qué sirve el argumento -l junto al comando ls?
+El argumento -l junto al comando ls muestra la lista de archivos y directorios en un formato largo. Este formato incluye información adicional sobre cada archivo o directorio, como:
+-Permisos de archivo
+-Número de enlaces
+-Propietario
+-Grupo
+-Tamaño del archivo
+-Fecha y hora de la última modificación
+-Nombre del archivo o directorio
 ### Usar el contenedor de jenkins creado previamente y ejecutar el comando ls con el argumento -l
-# COMPLETAR
-# COLOCAR UNA CAPTURA DE PANTALLA
+![image](https://github.com/CristianDTV/2024A-ISWD633-GR1Cristian/assets/158982181/90f4763a-6ad2-471a-86f2-026835b48f71)
+
 
 ### Para ejecutar un shell interactivo en un contenedor de Docker especificado.
 El comando **docker exec** te permite acceder a la sesión shell de un contenedor en ejecución, estarás dentro del contenedor y podrás ejecutar comandos como si estuvieras en una terminal normal. 
@@ -54,8 +65,11 @@ docker exec -i <nombre contenedor> /bin/bash
 ```
 ó
 ```
-docker exec -i <nombre contenedor> bash 
+docker exec -i <nombre contenedor> bash
 ```
+![image](https://github.com/CristianDTV/2024A-ISWD633-GR1Cristian/assets/158982181/ed48eb3b-712d-4749-bf50-2871cf11ed1c)
+
+
 **Considerar**
 - /bin/bash: Al especificar la ruta completa del shell, Docker buscará el ejecutable /bin/bash en el sistema de archivos del contenedor y lo ejecutará. Esto es útil cuando quieres asegurarte de que se está utilizando un shell específico que está ubicado en una ubicación conocida en el sistema de archivos del contenedor. 
 - bash: Al especificar solo el nombre del shell, Docker buscará el comando bash en las rutas del sistema (por lo general, en las rutas definidas en la variable de entorno PATH) del contenedor y lo ejecutará. Esto asume que bash está disponible en alguna de las rutas del sistema definidas en el contenedor.
@@ -69,7 +83,8 @@ Ejecutar
 ```
 whoami
 ```
-# COLOCAR UNA CAPTURA DE PANTALLA
+![image](https://github.com/CristianDTV/2024A-ISWD633-GR1Cristian/assets/158982181/bc45aac5-ce2b-492c-a3be-0d347703d379)
+
 
 **Si se visualiza el mensaje command not found, considerar**
 El problema se debe a que no se ha asignado un terminal de salida al contenedor al ejecutar el comando. Cuando usas docker exec -i jenkins-server /bin/bash en Windows, el comando se ejecuta pero no hay un terminal asignado para mostrar la salida del comando ls.
@@ -89,9 +104,7 @@ docker exec -it <nombre contenedor> <programa o comando>
 
 ### Ahora puedes acceder al contenedor de jenkins y obtener la contraseña ubicada en /var/jenkins_home/secrets/initialAdminPassword
 
-# COMPLETAR
-
-### Colocar una captura de pantalla de la ventana que aparece después de colocar la contraseña.
+![image](https://github.com/CristianDTV/2024A-ISWD633-GR1Cristian/assets/158982181/4b49c093-7b57-43af-bc9b-8cd4749b1d9a)
 
 **Para este punto no es necesario continuar con la instalación de Jenkins**
 
@@ -99,7 +112,7 @@ docker exec -it <nombre contenedor> <programa o comando>
 ### Para ver los logs de un contenedor
 
 ```
-docker logs -n <cantidad de líneas> <nombre o id del contenedor> 
+docker logs n <cantidad de líneas> <nombre o id del contenedor> 
 ```
 -t: para incluir la fecha y la hora
 

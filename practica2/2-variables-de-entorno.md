@@ -1,6 +1,6 @@
 # Variables de Entorno
 ### ¿Qué son las variables de entorno
-# COMPLETAR
+Las variables de entorno son especialmente útiles para configurar contenedores. Puedes pasar variables de entorno a un contenedor de Docker utilizando la opción -e o --env.
 
 ### Para crear un contenedor con variables de entorno
 
@@ -10,21 +10,20 @@ docker run -d --name <nombre contenedor> -e <nombre variable1>=<valor1> -e <nomb
 
 ### Crear un contenedor a partir de la imagen de nginx:alpine con las siguientes variables de entorno: username y role. Para la variable de entorno rol asignar el valor admin.
 
-# COMPLETAR
-
-# CAPTURA CON LA COMPROBACIÓN DE LA CREACIÓN DE LAS VARIABLES DE ENTORNO DEL CONTENEDOR ANTERIOR
+![image](https://github.com/CristianDTV/2024A-ISWD633-GR1Cristian/assets/158982181/2420ab97-33df-4664-9256-2c12569b205b)
 
 ### Crear un contenedor con mysql:8 , mapear todos los puertos
-# COMPLETAR
+
+![image](https://github.com/CristianDTV/2024A-ISWD633-GR1Cristian/assets/158982181/76102e36-ae76-4f20-a4f3-c1a59640a39a)
 
 ### ¿El contenedor se está ejecutando?
-# COMPLETAR
+No
 
 ### Identificar el problema
-# COMPLETAR
+![image](https://github.com/CristianDTV/2024A-ISWD633-GR1Cristian/assets/158982181/99d01cac-9b46-4c4f-b897-4809c966290c)
 
 ### Eliminar el contenedor creado con mysql:8 
-# COMPLETAR
+![image](https://github.com/CristianDTV/2024A-ISWD633-GR1Cristian/assets/158982181/84bcb747-013a-46ee-843f-4f22361ac245)
 
 ### Para crear un contenedor con variables de entorno especificadas
 - Portabilidad: Las aplicaciones se vuelven más portátiles y pueden ser desplegadas en diferentes entornos (desarrollo, pruebas, producción) simplemente cambiando el archivo de variables de entorno.
@@ -41,9 +40,7 @@ docker run -d --name <nombre contenedor> --env-file=<nombreArchivo>.<extensión>
 Es necesario especificar la ruta absoluta del archivo si este se encuentra en una ubicación diferente a la que estás ejecutando el comando docker run.
 
 ### Crear un contenedor con mysql:8 , mapear todos los puertos y configurar las variables de entorno mediante un archivo
-# COMPLETAR
-
-# CAPTURA CON LA COMPROBACIÓN DE LA CREACIÓN DE LAS VARIABLES DE ENTORNO DEL CONTENEDOR ANTERIOR 
+![image](https://github.com/CristianDTV/2024A-ISWD633-GR1Cristian/assets/158982181/b72ba3b7-2bb0-4af7-b118-637a17d93315)
 
 ### ¿Qué bases de datos existen en el contenedor creado?
-# COMPLETAR
+![image](https://github.com/CristianDTV/2024A-ISWD633-GR1Cristian/assets/158982181/10e3aeb8-bf1d-49bf-aa94-4c69d2ff26a1)

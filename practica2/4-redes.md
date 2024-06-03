@@ -12,12 +12,14 @@ Las redes son un componente fundamental que permite la comunicación entre conte
 ```
 docker network create <nombre red> -d bridge
 ```
+![image](https://github.com/CristianDTV/2024A-ISWD633-GR1Cristian/assets/158982181/3fafa80e-a0c1-467b-b30e-41a7cdd698d0)
 
 ### Crear un contenedor vinculado a una red
 
 ```
 docker run -d --name <nombre contenedor> --network <nombre red> <nombre imagen>
 ```
+![image](https://github.com/CristianDTV/2024A-ISWD633-GR1Cristian/assets/158982181/c264503e-6b6e-4f8e-8486-e7ce11bfc9ba)
 
 ### Para saber a qué red está conectado un contenedor
 
@@ -28,32 +30,35 @@ docker inspect <nombre contenedor>
 ```
 docker network inspect <nombre red> 
 ```
+![image](https://github.com/CristianDTV/2024A-ISWD633-GR1Cristian/assets/158982181/6e0a43ce-b12a-4755-9003-5c4da66598d0)
 
 ### Vincular contenedor a una red
 ```
 docker network connect <nombre red> <nombre contenedor>
 ```
+![image](https://github.com/CristianDTV/2024A-ISWD633-GR1Cristian/assets/158982181/71be0ee9-9fb9-4128-b226-d4c8c746f8f0)
 
 ### Para desvincular un contenedor de una red
 ```
 docker network disconnect <nombre red> <nombre contenedor>
 ```
+![image](https://github.com/CristianDTV/2024A-ISWD633-GR1Cristian/assets/158982181/2bd4d55d-688d-43fb-8ea3-2dc6ded93fca)
 
 ### Para listar las redes existentes
 ```
 docker network ls
 ```
+![image](https://github.com/CristianDTV/2024A-ISWD633-GR1Cristian/assets/158982181/a207798d-1949-443a-b177-160c3c2bb884)
 
 ### Crear los contenedores y las redes que se presentan en el esquema. Usar para todos los contenedores la imagen de nginx:alpine
 
 ![Imagen](imagenes/esquema-ejercicio-redes.PNG)
 
 # COLOCAR UNA CAPTURA DE LAS REDES EXISTENTES CREADAS
+![image](https://github.com/CristianDTV/2024A-ISWD633-GR1Cristian/assets/158982181/8e1577c2-702b-44ff-a0cb-0a5d26d58600)
 
 # COLOCAR UNA(S) CAPTURAS(S) DE LOS CONTENEDORES CREADOS EN DONDE SE EVIDENCIE A QUÉ RED ESTÁN VINCULADOS
+![image](https://github.com/CristianDTV/2024A-ISWD633-GR1Cristian/assets/158982181/278a8b46-3997-47ca-b001-6272ecfb43b9)
 
-### Para eliminar las redes creadas
-```
-docker network rm <nombre de la red>
-```
-
+# Eliminar las redes creadas
+![image](https://github.com/CristianDTV/2024A-ISWD633-GR1Cristian/assets/158982181/1c96f395-bf9b-4570-a332-1a24056ccf43)
