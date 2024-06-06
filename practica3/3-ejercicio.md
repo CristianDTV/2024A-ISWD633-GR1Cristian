@@ -13,10 +13,10 @@ Ruta carpeta host: .../ejercicio3/db
 La carpeta db del host contiene los archivos de datos de MySQL, incluyendo bases de datos, tablas y registros.
 
 ### Crear un contenedor con la imagen mysql:8  en la red net-wp, configurar las variables de entorno: MYSQL_ROOT_PASSWORD, MYSQL_DATABASE, MYSQL_USER y MYSQL_PASSWORD
-# COMPLETAR CON EL COMANDO
+![image](https://github.com/CristianDTV/2024A-ISWD633-GR1Cristian/assets/158982181/d7f97533-5204-4236-98a0-5a8f3adba509)
 
 ### ¿Qué observa en la carpeta db que se encontraba inicialmente vacía?
-# COMPLETAR CON LA RESPUESTA A LA PREGUNTA
+Se observa que ahora la carpeta contiene varios archivos y directorios, que corresponden a las bases de datos y otros datos utilizados por MySQL.
 
 ### Para que persista la información es necesario conocer en dónde wordpress almacena la información.
 # COMPLETAR LA SIGUIENTE ORACIÓN. REVISAR LA DOCUMENTACIÓN DE LA IMAGEN EN https://hub.docker.com/)
