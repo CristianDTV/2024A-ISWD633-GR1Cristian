@@ -61,7 +61,7 @@ docker run -d --name server-drupal --publish published=9700,target=80 -v <nombre
 
 _La instalación puede tomar varios minutos, mientras espera realice un diagrama de los contenedores que ha creado en este apartado._
 
-# COMPLETAR CON EL DIAGRAMA SOLICITADO
+![image](https://github.com/CristianDTV/2024A-ISWD633-GR1Cristian/assets/158982181/1dfd1c03-ab34-4ee8-b0ad-623ba67a4fa7)
 
 ### Eliminar un volumen específico
 ```
